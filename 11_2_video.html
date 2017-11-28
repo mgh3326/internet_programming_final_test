@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/hugagip/1/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<body>
+image : http://i.yting.com/vi/Amq-qlqbjYA/{0|1|2|3}.jpg<br>
+{_(공백)|mq|hq|sd|maxrds}default.jpg
+<br>
+<img src="http://i.ytimg.com/vi/Amq-qlqbjYA/maxresdefault.jpg"/>
+<hr>
+<br>
+video:"https://www.ytapi.com/api/Amq-qlqbjYA/direct/22/" <br>
+https://www.ytapi.com?format=direct&amp;itag=22&amp;vid=Amq-qlqbjYA <br>
+<button onclick="pp(v)">play</button>
+<video id="v" width="100%" src="https://www.ytapi.com?format=direct&itag=22&vid=Zt0eKY3R9kQ" allowfullscreen></video>
+<hr>
+<!-- <video : width="100%" src="https://www.ytapi.com/api/VdAkPKKvYl4/direct/22/" controls allowfullscreen></video> controls autoplay
+<hr> -->
+iframe : https://www.youtube.com/embed/Amq-qlqbjYA
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Amq-qlqbjYA?autoplay=" frameborder="0" allowfullscreen></iframe>
+<script>
+    function pp(v){
+        v=v.paused?v.play():v.pause();
+    }
+</script>
+</body>
+</html>

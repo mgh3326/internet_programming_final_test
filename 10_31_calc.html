@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/bahupiq/1/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<body>
+<input type="text" id="a"/>
+<select id="op">
+    <option value=""/>선택
+    <option value="+"/>+
+    <option value="-"/>-
+    <option value="*"/>*
+    <option value="/"/>/
+    <option value="%"/>%
+
+
+</select>
+<input type="text" id="b"/>
+<button onclick="calc(op.value,a.value,b.value)">
+    =
+</button>
+<input type="text" id="c"/><hr>
+
+<input type="file" accept="image/*, audio/*, video/*" onchange="load(this.files)"/>
+<div id="out"></div>
+
+<script>
+    function load(files){
+        var file=window.URL.createObjectURL(files[0]);
+//   alert(files[0].type);
+        var tag=files[0].type.split("/")[0];
+        out.innerHTML="<"+tag+" src='"+file+"' width= 100% controls allowfullscreen autoplay />";
+    }
+    function calc(o,x,y){
+        switch(o)
+        {
+            case '+': c.value=parseInt(x)+parseInt(y);break;
+            case '-': c.value=parseInt(x)-parseInt(y);break;
+            case '*': c.value=parseInt(x)*parseInt(y);break;
+            case '/': c.value=parseInt(x)/parseInt(y);break;
+            case '%': c.value=parseInt(x)%parseInt(y);break;
+
+        }
+//   c.value=parseInt(x)+parseInt(y);
+    }
+</script>
+
+</body>
+</html>
+<!-- http://cafe.naver.com/BGMPlayer.nhn?cafeId: -->
+<!-- if select switch case for var a[][] -->
+<!-- <img src=""/>
+<video src=""/>
+<audio src=""/> -->

@@ -1,0 +1,56 @@
+<!--주민번호 마지막 자리 알아내기 http://jsbin.com/qunoke-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/qunoke/1/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<body>
+주민번호 :
+<input id="sn1" maxlength=6 size=5 placeholder="yymmdd"/>-
+<input id="sn2" maxlength=6 size=5 placeholder="123456" type="password"/>
+
+<input type="button" value="확인" onclick="check()"/>
+
+<script>
+    var wt="234567892345"
+    var sn="";
+
+    function check(){
+        var temp=0;
+        sn=sn1.value+sn2.value;
+        //alert(sn);
+        for(i=0;i<12;i++){
+            temp+=parseInt(wt.substr(i,1))*parseInt(sn.substr(i,1));
+//     Example
+// Extract parts of a string:
+
+// var str = "Hello world!";
+// var res = str.substr(1, 4);
+// The result of res will be:
+
+// ello
+
+//     var a = parseInt("10") + "<br>"
+        }
+        temp=temp%11;//1)
+        temp=11-temp;//2)
+        temp=temp%10;//3)
+        alert(temp);
+
+    }
+</script>
+
+
+</body>
+</html>
