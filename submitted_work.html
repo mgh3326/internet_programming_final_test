@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/civuqah/11/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>REPORT</title>
+
+    <style id="jsbin-css">
+        *{margin:0;padding:0;}
+        nav{position:absolute;z-index:2;opacity:0.3;right:0px;}
+        nav:hover{opacity:1;}
+        iframe{border:0;width:100vw;height:100vh;}
+    </style>
+</head>
+<body onload="init()">
+<nav>
+    컴퓨터소프트웨어학과/2014726058/문광현 과제
+    <select id="report" onchange="load(this.value)"></select>
+</nav>
+<a href="http://jsbin.com/civuqah">실시간버전
+
+
+<iframe id="iframe"></iframe>
+<script>
+    var path="http://jsbin.com/";
+    var temp="";
+    var a=["과제 선택","cevades","yihomok","yoqohey","xisujab","cavaye","jeyaqix","sucevil","pixujik","jiliqiv","yujaseq","qunoke","qedoma","bahupiq","hugagip","zufacav","xudesab","tonubiy","pisebuz","cozehux","danoqo","radoceb"];
+
+    function init(){
+        for(i=0;i<a.length;i++){
+            if(i!==0){
+                temp+="<option value='"+a[i]+"' />과제"+i+"번째";
+            }else{
+                temp+="<option value='' />"+a[i];
+            }
+        }//for i
+        report.innerHTML=temp;
+    }
+
+    function load(jsid){
+
+        iframe.src=path+jsid;
+
+
+    }
+</script>
+</body>
+</html>

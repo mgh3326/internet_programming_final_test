@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/hihunom/4/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+
+    <style id="jsbin-css">
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        td {
+            width:150px;
+            text-align:center;
+        }
+
+        img, button {
+            width:140px;
+        }
+
+        #tit {
+            font-size:24pt;
+            color:green;
+        }
+
+        table {
+            background:url("http://cfile28.uf.tistory.com/image/2137E439521346182E4C25");
+        }
+    </style>
+</head>
+<body>
+
+<table border=1 align=center>
+    <tr> <!-- row -->
+        <td colspan=4><audio id="ado" autoplay controls /> </td>
+    </tr>
+
+    <tr> <!-- row -->
+        <td colspan=4 id="tit">가위 바위 보 게임</td>
+    </tr>
+
+    <tr> <!-- row -->
+        <td>전</td> <!-- data -->
+        <td>승</td>
+        <td>무</td>
+        <td>패</td>
+    </tr>
+
+    <tr> <!-- row -->
+        <td id="tt">0</td> <!-- data -->
+        <td id="ww">0</td>
+        <td id="dd">0</td>
+        <td id="ll">0</td>
+    </tr>
+
+    <tr> <!-- row -->
+        <td colspan=4 id="result">결과</td>
+    </tr>
+
+    <tr> <!-- row -->
+        <td colspan=2>사용자</td> <!-- data -->
+        <td colspan=2>컴퓨터</td>
+    </tr>
+
+    <tr> <!-- row -->
+        <td colspan=2>
+            <img id="usr">
+        </td> <!-- data -->
+        <td colspan=2>
+            <img id="com">
+        </td>
+    </tr>
+
+    <tr> <!-- row -->
+        <td><button value=0 onclick="play(this.value)">
+            <img src="http://rsp.alltheway.kr/images/main/main01.png" />
+        </button></td> <!-- data -->
+        <td><button value=1 onclick="play(this.value)">
+            <img src="http://rsp.alltheway.kr/images/main/main02.png" />
+        </button></td>
+        <td><button value=2 onclick="play(this.value)">
+            <img src="http://rsp.alltheway.kr/images/main/main03.png" />
+        </button></td>
+        <td><button onclick="location.reload()">리셋</button></td>
+    </tr>
+
+</table>
+
+<script>
+    var t = 0, w = 0, d = 0, l = 0;
+    var r = "";
+    var path = "http://rsp.alltheway.kr/images/main/main0";
+
+    function play(u) {
+        var c = parseInt(Math.random() * 100) % 3;
+
+        t++;
+        if (u == c) {
+            r = "무";
+            d++;
+            ado.src = "https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/clock-half-hour_M1Y3C2E_.mp3";
+        } else if ((u + 1) % 3 == c) {
+            r = "패";
+            l++;
+            ado.src = "https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/falling-on-ground_zyLbMzNd.mp3";
+        } else {
+            r = "승";
+            w++;
+            ado.src = "https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/loud-clapping_MJ27XaVO.mp3";
+        }
+
+        tt.innerHTML = t;
+        ww.innerHTML = w;
+        dd.innerHTML = d;
+        ll.innerHTML = l;
+        result.innerHTML = r;
+
+        usr.src = path + (parseInt(u) + 1) + ".png";
+        com.src = path + (c + 1) + ".png";
+    }
+</script>
+</body>
+</html>

@@ -1,14 +1,17 @@
 9월 5일 자기소개  http://jsbin.com/cevades
 9월 7일 시간표   http://jsbin.com/yihomok
 9월 12일 a링크  http://jsbin.com/yoqohey
+<button onclick="load(s.value,f.value)">길찾기</botton>
+
 9월 14일 파일 선택 http://jsbin.com/xisujab
 9월 14일 동영상 사진 http://jsbin.com/cavaye
 9월 19일 라디오 체크박스     http://jsbin.com/jeyaqix
 9월 21일  전화 문자   http://jsbin.com/sucevil
-9월 26일 가위바위보 http://jsbin.com/pixujik
+9월 26일 가위바위보 http://jsbin.com/pixujik --밑에 꺼로하자
 9월 28일 가위바위보 http://jsbin.com/hihunom
 9월 28일 노래방  http://jsbin.com/jiliqiv
 10월 10일 HEADER NAV    http://jsbin.com/yujaseq
+--중간고사
 10월 24일 주민등록 검증기    http://jsbin.com/qunoke
 10월 26일 구구단     http://jsbin.com/qedoma
 10월 31일 계산기  http://jsbin.com/bahupiq
@@ -22,3 +25,5 @@ jsbin.com/nanikuf 이건 정규꺼
 18번째꺼 추가 jsbin.com/tibixaz
 19번째꺼 추가 jsbin.com/cozehux
 20번째꺼 추가 jsbin.com/danoqo
+최근꺼 radoceb
+과제 제출용 civuqah

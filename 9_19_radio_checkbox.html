@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/jeyaqix/2/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>input type test</title>
+
+</head>
+<body>
+<fieldset>
+    <legend>로그인</legend>
+    <input type="text" id="uid" placeholder="id"/>
+    <input type="password" id="pw" placeholder="password" />
+    <input type="button" onclick="login(uid.value, pw.value)" value="login" />
+</fieldset>
+
+<select onchange="sel(this.value)">
+    <option value="매뉴선택" />매뉴선택
+    <option value="피자" />피자
+    <option value="치맥" />치맥
+    <option value="한우소갈비" />한우소갈비
+    <option value="전어회/구이" />전어회/구이
+</select><hr>
+
+<form onchange="radio(grd.value)">
+    <input type="radio" name="grd" value="1" />1학년
+    <input type="radio" name="grd" value="2" />2학년
+    <input type="radio" name="grd" value="3" />3학년
+    <input type="radio" name="grd" value="4" />4학년
+</form>
+
+<form onchange="checkbox(hobby)">
+    <input type="checkbox" name="hobby" value="영화" />영화
+    <input type="checkbox" name="hobby" value="음악" />음악
+    <input type="checkbox" name="hobby" value="독서" />독서
+    <input type="checkbox" name="hobby" value="운동" />운동
+    <input type="checkbox" name="hobby" value="게임" />게임
+</form>
+
+<textarea id="ta" cols=50 rows=5></textarea>
+<button onclick="textarea(ta.value)">확인</button>
+
+
+<script>
+    function login(i, p){
+        alert(i+"\n"+p);
+    }
+    function sel(s){
+        alert(s);
+    }
+    function radio(r){
+        alert(r);
+    }
+    function checkbox(h){
+        //alert(h.length);
+        var temp="";
+        for(i=0; i<h.length; i++){
+            temp+=(h[i].checked)?h[i].value:"";
+        }
+        alert(temp);
+    }
+    function textarea(t){
+        alert(t);
+    }
+</script>
+</body>
+</html>

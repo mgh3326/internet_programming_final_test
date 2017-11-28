@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/xisujab/1/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>multi media</title>
+
+    <style id="jsbin-css">
+        #{
+  margin.0;
+  padding.0;
+}
+
+        #image,#video{
+            width:100vw;
+        }
+    </style>
+</head>
+<body>
+
+<input type="file" onchange="load(this.files)"
+       accept="image/*, audio/*, video/*"/>
+<div id="multi"></div>
+
+
+<script>
+    function load(files){
+        var ftype=files[0].type.split("/")[0];
+        //alert(ftype);
+        var filesrc=window.URL.createObjectURL(files[0]);
+        var tmp="<"+ftype+" src='"+filesrc+"' id='"+ftype+"' width=100% autoplay controls />";
+        alert(tmp);
+        multi.innerHTML=tmp;
+    }
+</script>
+
+
+</body>
+</html>
