@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Created using JS Bin
+    http://jsbin.com
+
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/wozoyez/2/edit)
+
+    Released under the MIT license: http://jsbin.mit-license.org
+    -->
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+
+    <style id="jsbin-css">
+        body{
+            background:#cccccc url(http://i.imgur.com/8NwQLFS.png) no-repeat fixed center center; /*한 번에 모든 배경 속성 입력*/
+            /*
+            background-image:url(http://i.imgur.com/8NwQLFS.png); 배경 이미지 지정
+            background-repeat:no-repeat; 배경 이미지의 반복 형태 지정
+            background-color:#cccccc;  배경 색상
+            background-size:512px 512px; //배경 이미지의 크기 지정
+            background-attachment:fixed;scroll도됨 //배경 이미지 부착 형태 지정
+            background-position:center center; 배경 이미지의 위치 지정
+            */
+        }
+        /*글자 속성 이거는 그냥 내가 정리하는거
+        color : 글자 색상
+        font-size : 글자 크기
+        font-family : 글꼴
+        font-style : 글자 스타일
+        font-weight : 글자 두께
+        text-align : 글자 정렬 형식
+        line-height : 글자 높이
+        text-decoration : 링크가 적용딘 글자 처리*/
+        div, .cc{/*tag*/ /*태그 선택자*/
+            font-size:24pt;
+        }
+        #b{/*id*/            /*아이디 선택자*/
+            color:red;
+        }
+        .cb{/*class*/ /*클래스 선택자*/
+            color:blue;
+        }
+        .cc{
+            background-color:orange;
+        }
+        /** 전체 선택자*/
+    </style>
+</head>
+<body>
+
+
+<div id="a">id a</div>
+<div id="b" >id b</div>
+<div id="c" class="cc cb">id c</div><!-- 여기 여기 다 들어갈수있다. -->
+<!-- 아이디는 불가능 하지만 클래스는 중복이 가능하다. -->
+<span class="ca">c a</span>
+    <span class="cb">c b</span>
+        <span class="cc">c c</span>
+
+</body>
+</html>
+<!--
+http://output.jsbin.com/yixuwab -->
+<!--자바 스크립트 이스케이프 문자-->
+<!--\t 수평탭-->
+<!--\n 행바굼-->
+<!--\\ 역 슬래시-->
+<!--\' 작은따옴표-->
+<!--\" 큰따옴표-->
+<!--+ 문자열 연결 연산자-->

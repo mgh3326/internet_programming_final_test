@@ -52,7 +52,7 @@
 
 
 <script>
-    function login(i, p){
+    function login(i, p){//함수를 출력해주도록 하네
         alert(i+"\n"+p);
     }
     function sel(s){
@@ -61,10 +61,11 @@
     function radio(r){
         alert(r);
     }
-    function checkbox(h){
+    function checkbox(h){//check 하면  alert 하도록 했네
         //alert(h.length);
         var temp="";
-        for(i=0; i<h.length; i++){
+        var i;
+        for(i=0; i<h.length; i++){//이거 알아둬야겠다.
             temp+=(h[i].checked)?h[i].value:"";
         }
         alert(temp);

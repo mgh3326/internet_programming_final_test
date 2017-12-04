@@ -7,7 +7,7 @@
     Created using JS Bin
     http://jsbin.com
 
-    Copyright (c) 2017 by mgh3326 (http://jsbin.com/xisujab/1/edit)
+    Copyright (c) 2017 by mgh3326 (http://jsbin.com/xisujab/5/edit)
 
     Released under the MIT license: http://jsbin.mit-license.org
     -->
@@ -16,34 +16,34 @@
     <title>multi media</title>
 
     <style id="jsbin-css">
-        #{
-  margin.0;
-  padding.0;
-}
+        * {
+            margin:0;
+            padding:0;
+        }
 
-        #image,#video{
+        #image,#video {
             width:100vw;
         }
     </style>
 </head>
 <body>
 
-<input type="file" onchange="load(this.files)"
-       accept="image/*, audio/*, video/*"/>
-<div id="multi"></div>
-
+<input type="file" onchange="load(this.files)" accept="image/*, audio/*, video/*"/>
+<!--파일을 넘겨준다.-->
+<div id="multi"> </div>
 
 <script>
-    function load(files){
-        var ftype=files[0].type.split("/")[0];
+    function load(files) {
+        var ftype = files[0].type.split('/')[0];//image audio video의 형식을 받기 위함
         //alert(ftype);
-        var filesrc=window.URL.createObjectURL(files[0]);
-        var tmp="<"+ftype+" src='"+filesrc+"' id='"+ftype+"' width=100% autoplay controls />";
-        alert(tmp);
-        multi.innerHTML=tmp;
+
+        var filesrc = window.URL.createObjectURL(files[0]);//소스를 만듬
+        var tmp = "<" + ftype + " src='" + filesrc + "' id='" + ftype + "' width=100% autoplay controls />";//타입을 열도록함
+
+        alert(tmp);//잘들어왔나 확인
+        multi.innerHTML = tmp;//html에 값을 넘겨준다.
     }
 </script>
-
 
 </body>
 </html>
